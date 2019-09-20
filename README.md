@@ -4,7 +4,7 @@
    
 Obs.: A não ser que seja explicitamente solicitado, nenhuma solução para nenhuma das questões abaixo deve exibir condições de corrida, entrar em deadlock, entrar em livelock ou fazer com que threads sofram de starvation.  
  
-**QUESTÃO 1 (Número primo)  **
+**QUESTÃO 1 (Número primo)**
    
 Faça um programa em Java que dado um número N calcula se este número é primo. Um número primo tem apenas dois divisores: um e ele mesmo. O programa deve dividir o N pelos números de 2 a N, para descobrir a primalidade por força bruta. Faça também uma versão deste programa onde o cálculo deverá ser realizado paralelamente por várias threads. A realização do cálculo deverá ser dividida entre as threads criadas de modo que em um processador com X cores, o programa com X threads consiga ser mais rápido que o programa sequencial.
 O número de threads criadas será um parâmetro X do programa. Observe e descreva, em um arquivo texto, o tempo de execução do programa sequencial e para X igual a 2, 100, 500, 1000, 10000. A partir de qual valor de X a execução do programa ficou mais lenta que a sequencial? Explique porque.  
