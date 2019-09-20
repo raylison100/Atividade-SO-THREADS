@@ -3,7 +3,7 @@
 ## Programação Concorrente
    
 Obs.: A não ser que seja explicitamente solicitado, nenhuma solução para nenhuma das questões abaixo deve exibir condições de corrida, entrar em deadlock, entrar em livelock ou fazer com que threads sofram de starvation.  
-  
+ 
 QUESTÃO 1 (Número primo)  
    
 Faça um programa em Java que dado um número N calcula se este número é primo. Um número primo tem apenas dois divisores: um e ele mesmo. O programa deve dividir o N pelos números de 2 a N, para descobrir a primalidade por força bruta. Faça também uma versão deste programa onde o cálculo deverá ser realizado paralelamente por várias threads. A realização do cálculo deverá ser dividida entre as threads criadas de modo que em um processador com X cores, o programa com X threads consiga ser mais rápido que o programa sequencial.
@@ -11,7 +11,8 @@ O número de threads criadas será um parâmetro X do programa. Observe e descre
   
 QUESTÃO 2 (Orcs e a presa)  
   
- Orcs são criaturas estúpidas que só conseguem fazer duas coisas: morder ou gritar. Para um Orc conseguir comer sua presa, ele deve primeiro gritar até atordoar sua vítima, para depois então tentar morder. Um certo dia dois Orcs resolveram caçar juntos no pântano e eles fizeram um acordo: quando eles avistarem uma presa, primeiro eles tentarão gritar, quem conseguir gritar depois poderá tentar morder, se o outro não estiver mordendo, ele conseguirá morder com certeza. Mas claro, Orcs não são criaturas confiáveis, então mesmo que o primeiro Orc consiga gritar o outro ainda assim terá uma chance de 50% de tentar morder e roubar a presa. Implemente este problema dos Orcs usando locks explícitos. Considere que a cada segundo aparece uma presa nova. O programa deve parar quando  um  número  N  de  presas,  definido  no  início  da  execução,  forem atacadas. Cada Orc deve ser implementada como uma thread distinta.    
+ Orcs são criaturas estúpidas que só conseguem fazer duas coisas: morder ou gritar. Para um Orc conseguir comer sua presa, ele deve primeiro gritar até atordoar sua vítima, para depois então tentar morder. Um certo dia dois Orcs resolveram caçar juntos no pântano e eles fizeram um acordo: quando eles avistarem uma presa, primeiro eles tentarão gritar, quem conseguir gritar depois poderá tentar morder, se o outro não estiver mordendo, ele conseguirá morder com certeza. Mas claro, Orcs não são criaturas confiáveis, então mesmo que o primeiro Orc consiga gritar o outro ainda assim terá uma chance de 50% de tentar morder e roubar a presa. Implemente este problema dos Orcs usando locks explícitos. Considere que a cada segundo aparece uma presa nova. O programa deve parar quando  um  número  N  de  presas,  definido  no  início  da  execução,  forem atacadas. Cada Orc deve ser implementada como uma thread distinta.  
+ 
 QUESTÃO 3 (Macacos e as Bananas)  
   
 Três macacos estão numa floresta, morrendo de fome, até que eles encontram uma bananeira. Todos eles querem subir na bananeira para comer, mas só dois podem subir ao mesmo tempo. Caso haja espaço para subir, um macaco gasta 1 segundo para subir na bananeira, comer uma banana e depois descer. Cada macaco só pode comer uma banana por vez. Se o macaco tentar subir, mas já tiverem 2 macacos, ele deve esperar 2 segundos antes de tentar subir de novo. A bananeira possui inicialmente 50 bananas e se as bananas acabarem uma nova safra é produzida à uma taxa de 5 bananas por segundo, até atingir o máximo de 50 bananas, então para de produzir e espera acabar de novo. Um macaco só percebe que não há bananas prontas depois de subir, o que significa que ele também gasta 1 segundo para subir e descer. Se um macaco ficar 10 segundos sem comer, ele morre de fome, entretanto você não pode deixar nenhum macaco morrer de fome.
