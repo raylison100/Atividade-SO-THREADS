@@ -1,14 +1,20 @@
 package questao01;
 
+
 public class PrimoBruto {
-
+	
 	private boolean ePrimo;
-	private int avaliado;
+	private long avaliado;
+	
 
-	public PrimoBruto(int avaliado) {
+	public PrimoBruto(long avaliado) {
 
 		this.setePrimo(false);
 		this.setAvaliado(avaliado);
+	}
+	
+	public void run(){
+		this.validaPrimo();
 	}
 
 	public boolean validaPrimo() {
@@ -29,12 +35,12 @@ public class PrimoBruto {
 		this.ePrimo = ePrimo;
 	}
 
-	public int getAvaliado() {
+	public long getAvaliado() {
 		return avaliado;
 	}
 
-	public void setAvaliado(int avaliado) {
+	public void setAvaliado(long avaliado) {
 		this.avaliado = avaliado;
 	}
-
+	
 }
