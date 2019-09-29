@@ -65,7 +65,7 @@ public class Main1 {
 
 			for (int i = 0; i < x; i++) {
 
-				bruto[i] = new PrimoThread(i);
+//				bruto[i] = new PrimoThread(i);+
 
 			}
 			
